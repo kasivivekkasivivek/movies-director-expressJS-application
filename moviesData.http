@@ -1,0 +1,49 @@
+
+//Returns a list of all movie names in the movie table
+// API 1 (GET Method) 
+GET http://localhost:3000/movies/
+
+
+###
+//API 2 
+//Creates a new movie in the movie table. movie_id is auto-incremented
+POST http://localhost:3000/movies/
+Content-Type: application/json
+
+{
+  "directorId": 6,
+  "movieName": "Jurassic Park",
+  "leadActor": "Jeff Goldbl"
+}
+
+### 
+// API 3
+//Returns a movie based on the movie ID
+GET http://localhost:3000/movies/48/
+
+###
+//API 4
+//Updates the details of a movie in the movie table based on the movie ID
+PUT http://localhost:3000/movies/48/
+Content-Type: application/json
+
+{
+  "directorId": 24,
+  "movieName": "Thor",
+  "leadActor": "Christopher Hemsworth"
+}
+
+###
+//API 5
+//Deletes a movie from the movie table based on the movie ID
+DELETE http://localhost:3000/movies/48/
+
+###
+//API 6
+//Returns a list of all directors in the director table
+GET http://localhost:3000/directors/
+
+###
+//API 7
+//Returns a list of all movie names directed by a specific director
+GET http://localhost:3000/directors/5/movies/
